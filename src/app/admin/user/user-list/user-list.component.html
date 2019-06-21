@@ -1,0 +1,27 @@
+<div>
+  <button routerLink="/users/add" class="btn btn-primary">Add user</button>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Avatar</th>
+        <th>Email</th>
+        <th>First name</th>
+        <th>Last name</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="users">
+      <tr *ngFor="let user of users; let i = index">
+        <td style="text-align: center">{{i+1}}</td>
+        <td style="text-align: center">
+          <img src="{{user.avatar}}" width="50px"/>
+        </td>
+        <td>
+          <a routerLink="/users/detail/{{user.id}}">{{user.email}}</a>
+        </td>
+        <td>{{user.first_name}}</td>
+        <td>{{user.last_name}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

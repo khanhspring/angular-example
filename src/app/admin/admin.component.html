@@ -1,0 +1,19 @@
+<main class="main">
+    <aside class="sidebar">
+      <nav class="nav">
+        <ul>
+          <li><a routerLinkActive="active" routerLink="/dashboard">Dashboard</a></li>
+          <li><a routerLinkActive="active" routerLink="/users">Users</a></li>
+          <li><a routerLinkActive="active"  routerLink="/issues">Issues</a></li>
+          <li><a routerLink="/error/404">404</a></li>
+          <li><a routerLink="/error/403">403</a></li>
+        </ul>
+      </nav>
+    </aside>
+  
+    <section class="wrapper">
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
+    </section>
+  </main>
